@@ -1,0 +1,30 @@
+{
+  "name": "bw_browser",
+  "version": "1.0",
+  "description": "make your browser black and white to combat internet addiction",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/bw_browser16.png",
+      "32": "images/bw_browser32.png",
+      "48": "images/bw_browser48.png",
+      "128": "images/bw_browser128.png"
+    }
+  },
+  "icons": {
+    "16": "images/bw_browser16.png",
+    "32": "images/bw_browser32.png",
+    "48": "images/bw_browser48.png",
+    "128": "images/bw_browser128.png"
+  },
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
