@@ -4,13 +4,13 @@ function setBW() {
     if (result.bwSelectedOption !== "none" && 
        (result.blockedSites.includes(window.location.host) || result.bwSelectedOption === "all")) {
       console.log("should be enabled")
-      var body = document.body;
-      body.style['filter'] = 'grayscale(1)';
+      var html = document.documentElement;
+      html.style['filter'] = 'grayscale(1)';
     }
     else {
       console.log("oops not enabled")
-      var body = document.body;
-      body.style['filter'] = 'grayscale(0)';
+      var html = document.documentElement;
+      html.style['filter'] = 'grayscale(0)';
     }
   })  
 }
