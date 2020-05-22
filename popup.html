@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      button {
-        height: 30px;
-        width: 30px;
-        outline: none;
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="popup.css">
   </head>
   <body>
-    <button id="changeColor"></button>
+    <div class="wrapper">
+      <div class="header-container">
+        <h1>BW_BROWSER</h1>
+        <i id="optionsPage" class="material-icons">settings</i>
+      </div>
+      <p>Cut your internet addiction gradually by greying out attention-sucking websites.</p>
+      <h2>GREYED OUT SITES</h2>
+      <div class="button-container">
+        <div id="all" class="button">All</div>
+        <div id="blocked" class="button">Blocked</div>
+        <div id="none" class="button">None</div>
+      </div>
+    </div>
     <script src="popup.js"></script>
   </body>
 </html>

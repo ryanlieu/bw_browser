@@ -1,8 +1,11 @@
 {
-  "name": "bw_browser",
+  "name": "BW_BROWSER",
   "version": "1.0",
-  "description": "make your browser black and white to combat internet addiction",
-  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "description": "Block pages by greying them out",
+  "permissions": ["tabs", "activeTab", "declarativeContent", "storage"],
+  "background": {
+    "scripts": ["background.js"]
+  },
   "page_action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -18,13 +21,12 @@
     "48": "images/bw_browser48.png",
     "128": "images/bw_browser128.png"
   },
-  "manifest_version": 2,
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
+      "matches": ["<all_urls>"],
       "js": ["content.js"]
     }
-  ]
+  ],
+  "options_page": "index.html",
+  "manifest_version": 2
 }
